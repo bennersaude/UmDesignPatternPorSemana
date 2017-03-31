@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5587D255-4EEC-4288-AE22-283AE6785D94}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Conceitos.InjecaoDependencias</RootNamespace>
+    <AssemblyName>Conceitos.InjecaoDependencias</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DIP\ComDip\ParametrosSistema\FactoryParametrosSistema.cs" />
+    <Compile Include="DIP\ComDip\ParametrosSistema\IFactoryParametrosSistema.cs" />
+    <Compile Include="DIP\ComDip\ParametrosSistema\IWebConfig.cs" />
+    <Compile Include="DIP\ComDip\ParametrosSistema\ParametrosSistema.cs" />
+    <Compile Include="DIP\ComDip\ParametrosSistema\ParametrosSistemaLocal.cs" />
+    <Compile Include="DIP\ComDip\ParametrosSistema\PorConfigPortalDao.cs" />
+    <Compile Include="DIP\ComDip\ParametrosSistema\RequisicaoCliente.cs" />
+    <Compile Include="DIP\ComDip\ParametrosSistema\WebConfig.cs" />
+    <Compile Include="DIP\Dummies\ParametrosSistema\HttpClient.cs" />
+    <Compile Include="DIP\ComDip\ParametrosSistema\IHttpClient.cs" />
+    <Compile Include="DIP\Dummies\ParametrosSistema\IParametrosSistema.cs" />
+    <Compile Include="DIP\Dummies\ParametrosSistema\IPorConfigPortalDao.cs" />
+    <Compile Include="DIP\Dummies\ParametrosSistema\PorConfigPortal.cs" />
+    <Compile Include="DIP\SemDIP\ParametrosSistema\ParametrosSistema.cs" />
+    <Compile Include="DIP\SemDIP\ParametrosSistema\RequisicaoCliente.cs" />
+    <Compile Include="IoC\ComIoC\Entregas\EntregaFrutas.cs" />
+    <Compile Include="IoC\ComIoC\Entregas\EntregaSaladaFrutas.cs" />
+    <Compile Include="IoC\ComIoC\Entregas\Fruta.cs" />
+    <Compile Include="IoC\ComIoC\Entregas\Goiaba.cs" />
+    <Compile Include="IoC\ComIoC\Entregas\Maca.cs" />
+    <Compile Include="IoC\ComIoC\SAC\SACBusiness.cs" />
+    <Compile Include="IoC\ComIoC\Task\CriadorArquivoSincronizacao.cs" />
+    <Compile Include="IoC\ComIoC\Task\Sincronismos.cs" />
+    <Compile Include="IoC\ComIoC\Task\SincronizarTask.cs" />
+    <Compile Include="IoC\Dummies\SAC\PorSac.cs" />
+    <Compile Include="IoC\Dummies\SAC\PorSacDAO.cs" />
+    <Compile Include="IoC\Dummies\SAC\SACModels.cs" />
+    <Compile Include="IoC\Dummies\Task\Sincronizar.cs" />
+    <Compile Include="IoC\Dummies\Task\DadosParaSincronizacaoDTO.cs" />
+    <Compile Include="IoC\Dummies\Task\SincronizarEventosETiss.cs" />
+    <Compile Include="IoC\Dummies\Task\SincronizarGuiaETiss.cs" />
+    <Compile Include="IoC\SemIoC\Entregas\EntregaMaca.cs" />
+    <Compile Include="IoC\SemIoC\SAC\SACBusiness.cs" />
+    <Compile Include="IoC\SemIoC\Task\CriadorArquivoSincronizacao.cs" />
+    <Compile Include="IoC\Dummies\Task\SincronizacaoTaskBase.cs" />
+    <Compile Include="IoC\SemIoC\Task\SincronizarEventosETissTask.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
