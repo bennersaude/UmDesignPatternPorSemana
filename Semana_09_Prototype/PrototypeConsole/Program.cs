@@ -7,22 +7,32 @@ namespace PrototypeConsole
     {
         private static void Main(string[] args)
         {
-            var programador = new Programador()
+            var afilhado = new Programador
             {
-                Nome = "Nakahara",
+                Nome = "Santana",
                 Cargo = "Programador",
                 Projeto = "RoadMap",
                 Linguagem = "C#"
             };
 
+        var programador = new Programador()
+            {
+                Nome = "Nakahara",
+                Cargo = "Programador",
+                Projeto = "RoadMap",
+                Linguagem = "C#",
+                Afilhado = afilhado
+            };
+
             var programadorClone = (Programador)programador.Clone();
 
             programadorClone.Nome = "Santana";
+            programadorClone.Afilhado.Nome = "Outro";
 
             var testador = new Testador()
             {
                 Nome = "Testador1",
-                Cargo = "Programador",
+                Cargo = "Testador",
                 Projeto = "RoadMap"
             };
 

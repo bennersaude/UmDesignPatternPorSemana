@@ -5,10 +5,15 @@ namespace PrototypeConsole.Exemplo.Prototipos
     public class Programador : FuncionarioAbstract, IFuncionario
     {
         public string Linguagem { get; set; }
+        public Programador Afilhado { get; set; }
 
         public IFuncionario Clone()
         {
-            return (IFuncionario)MemberwiseClone();
+            var clone = (Programador)MemberwiseClone();
+
+            clone.Afilhado = (Programador)Afilhado?.Clone();
+
+            return clone;
         }
 
         public override string DetalhesFuncionario()
