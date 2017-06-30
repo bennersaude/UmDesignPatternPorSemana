@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="36181412-4eef-44c4-8d31-704e036d41d4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://mga-apl039.benner.com.br/QualidadeAgWeb/NonAuthenticatedServiceHost/tissSolicitacaoStatusProtocoloV3_03_02.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="tissSolicitacaoStatusProtocoloV3_03_02.disco" MetadataType="Disco" ID="673ee908-964a-4a45-b46e-683564106062" SourceId="1" SourceUrl="http://mga-apl039.benner.com.br/QualidadeAgWeb/NonAuthenticatedServiceHost/tissSolicitacaoStatusProtocoloV3_03_02.svc?disco" />
+    <MetadataFile FileName="tissSolicitacaoStatusProtocoloV3_03_02.xsd" MetadataType="Schema" ID="14c43928-b0d0-4d81-8dd3-e8f86a4d36dd" SourceId="1" SourceUrl="http://mga-apl039.benner.com.br/QualidadeAgWeb/NonAuthenticatedServiceHost/tissSolicitacaoStatusProtocoloV3_03_02.svc?xsd=xsd1" />
+    <MetadataFile FileName="tissSolicitacaoStatusProtocoloV3_03_021.xsd" MetadataType="Schema" ID="ab85311d-fb14-4814-b33f-0b4e71471282" SourceId="1" SourceUrl="http://mga-apl039.benner.com.br/QualidadeAgWeb/NonAuthenticatedServiceHost/tissSolicitacaoStatusProtocoloV3_03_02.svc?xsd=xsd0" />
+    <MetadataFile FileName="tissSolicitacaoStatusProtocolo.wsdl" MetadataType="Wsdl" ID="bd402558-0776-478a-a20f-e9f2a4fccf4a" SourceId="1" SourceUrl="http://mga-apl039.benner.com.br/QualidadeAgWeb/NonAuthenticatedServiceHost/tissSolicitacaoStatusProtocoloV3_03_02.svc?wsdl" />
+    <MetadataFile FileName="tissSolicitacaoStatusProtocoloV3_03_02.wsdl" MetadataType="Wsdl" ID="aac32340-2354-4853-b1db-a233a4862726" SourceId="1" SourceUrl="http://mga-apl039.benner.com.br/QualidadeAgWeb/NonAuthenticatedServiceHost/tissSolicitacaoStatusProtocoloV3_03_02.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="tissSolicitacaoStatusProtocoloV3_03_022.xsd" MetadataType="Schema" ID="6e8a08cd-e13e-4d3a-af15-8add30017593" SourceId="1" SourceUrl="http://mga-apl039.benner.com.br/QualidadeAgWeb/NonAuthenticatedServiceHost/tissSolicitacaoStatusProtocoloV3_03_02.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
