@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{27E0CBC2-F838-4268-8F56-CED39F541316}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Evitando.Duplicacao.de.Codigo</RootNamespace>
+    <AssemblyName>Evitando.Duplicacao.de.Codigo</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\tissLoteGuiasV3_02_02\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\tissLoteGuiasV3_03_02\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Exercicios\Exercicio1.cs" />
+    <Compile Include="Exercicios\Exercicio2.cs" />
+    <Compile Include="Exercicios\Exercicio3.cs" />
+    <Compile Include="Exercicios\Exercicio4.cs" />
+    <Compile Include="Generics\1.SemGenerics\ListaObjetos.cs" />
+    <Compile Include="Generics\2.ComGenerics\1.ListaObjetos.cs" />
+    <Compile Include="Generics\2.ComGenerics\3.Restricoes.cs" />
+    <Compile Include="Generics\2.ComGenerics\4.ExemplosSimples.cs" />
+    <Compile Include="Generics\2.ComGenerics\6.Entidades.cs" />
+    <Compile Include="Generics\3.ReutilizandoServicos\2.ServicosConsulta.cs" />
+    <Compile Include="Generics\3.ReutilizandoServicos\1.ServicosPersistencia.cs" />
+    <Compile Include="Generics\4.Validacao\Entidades.cs" />
+    <Compile Include="Generics\4.Validacao\Sincronizacao.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="OO\1.Heranca\2.ComHeranca\Heranca.cs" />
+    <Compile Include="OO\1.Heranca\1.SemHeranca\SemHeranca.cs" />
+    <Compile Include="OO\2.Polimorfismo\1.SemPolimorfismo\SemPolimorfismo.cs" />
+    <Compile Include="OO\2.Polimorfismo\2.Classes\PolimorfismoClasses.cs" />
+    <Compile Include="OO\2.Polimorfismo\3.Interfaces\PolimorfismoInterfaces.cs" />
+    <Compile Include="OO\2.Polimorfismo\4.ReutilizandoEntidades\CodigoDuplicado\Entidades.cs" />
+    <Compile Include="OO\2.Polimorfismo\4.ReutilizandoEntidades\Refatorado\Entidades.cs" />
+    <Compile Include="OO\2.Polimorfismo\5.ReutilizandoServicos\CodigoDuplicado\Servicos.cs" />
+    <Compile Include="OO\2.Polimorfismo\5.ReutilizandoServicos\Refatorado\Servicos.cs" />
+    <Compile Include="OO\2.Polimorfismo\6.Validacao\CodigoDuplicado\Entidades.cs" />
+    <Compile Include="OO\2.Polimorfismo\6.Validacao\CodigoDuplicado\SincronizacaoBeneficiario.cs" />
+    <Compile Include="OO\2.Polimorfismo\6.Validacao\UmPoucoMelhor\Sincronizacao.cs" />
+    <Compile Include="OO\Dummies.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Connected Services\tissLoteGuiasV3_02_02\Evitando.Duplicacao.de.Codigo.tissLoteGuiasV3_02_02.protocoloRecebimentoWS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\tissLoteGuiasV3_02_02\Evitando.Duplicacao.de.Codigo.tissLoteGuiasV3_02_02.tissLoteGuias_OperationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\tissLoteGuiasV3_02_02\tissLoteGuias.wsdl" />
+    <None Include="Connected Services\tissLoteGuiasV3_02_02\tissLoteGuiasV3_02_02.wsdl" />
+    <None Include="Connected Services\tissLoteGuiasV3_02_02\tissLoteGuiasV3_02_02.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\tissLoteGuiasV3_02_02\tissLoteGuiasV3_02_021.wsdl" />
+    <None Include="Connected Services\tissLoteGuiasV3_02_02\tissLoteGuiasV3_02_021.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\tissLoteGuiasV3_02_02\tissLoteGuiasV3_02_022.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\tissLoteGuiasV3_03_02\Evitando.Duplicacao.de.Codigo.tissLoteGuiasV3_03_02.protocoloRecebimentoWS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\tissLoteGuiasV3_03_02\Evitando.Duplicacao.de.Codigo.tissLoteGuiasV3_03_02.tissLoteGuias_OperationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\tissLoteGuiasV3_03_02\tissLoteGuias.wsdl" />
+    <None Include="Connected Services\tissLoteGuiasV3_03_02\tissLoteGuiasV3_03_02.wsdl" />
+    <None Include="Connected Services\tissLoteGuiasV3_03_02\tissLoteGuiasV3_03_02.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\tissLoteGuiasV3_03_02\tissLoteGuiasV3_03_021.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\tissLoteGuiasV3_03_02\tissLoteGuiasV3_03_022.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Compile Include="Generics\2.ComGenerics\2.TiposGenericos.cs" />
+    <Compile Include="Generics\2.ComGenerics\5.MultiplasRestricoes.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\tissLoteGuiasV3_02_02\" />
+    <WCFMetadataStorage Include="Connected Services\tissLoteGuiasV3_03_02\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\tissLoteGuiasV3_02_02\tissLoteGuiasV3_02_02.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\tissLoteGuiasV3_02_02\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\tissLoteGuiasV3_02_02\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\tissLoteGuiasV3_02_02\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\tissLoteGuiasV3_03_02\tissLoteGuiasV3_03_02.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\tissLoteGuiasV3_03_02\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\tissLoteGuiasV3_03_02\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\tissLoteGuiasV3_03_02\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
