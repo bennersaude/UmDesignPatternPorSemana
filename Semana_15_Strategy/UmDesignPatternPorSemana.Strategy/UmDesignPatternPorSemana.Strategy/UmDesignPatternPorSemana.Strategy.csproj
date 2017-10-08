@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2B222D59-4ED4-4056-B98E-282393DD07C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UmDesignPatternPorSemana.Strategy</RootNamespace>
+    <AssemblyName>UmDesignPatternPorSemana.Strategy</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ElegibilidadeBeneficiario\DadosAtendimento.cs" />
+    <Compile Include="ElegibilidadeBeneficiario\IParametrosOperadora.cs" />
+    <Compile Include="ElegibilidadeBeneficiario\RegrasElegibilidade\BeneficiarioComIdadeInvalidaParaSerDependente.cs" />
+    <Compile Include="ElegibilidadeBeneficiario\VerificacaoElegibilidade.cs" />
+    <Compile Include="FreteDaFelicidade\EntregaPedidos.cs" />
+    <Compile Include="FreteDaFelicidade\FactoryFreteBasica.cs" />
+    <Compile Include="FreteDaFelicidade\FactoryFreteComActivator.cs" />
+    <Compile Include="FreteDaFelicidade\FreteStrategy\AlfaTransportadora.cs" />
+    <Compile Include="FreteDaFelicidade\IFactoryFrete.cs" />
+    <Compile Include="FreteDaFelicidade\FreteStrategy\IFrete.cs" />
+    <Compile Include="FreteDaFelicidade\FreteStrategy\Pac.cs" />
+    <Compile Include="FreteDaFelicidade\FreteStrategy\RetiradaNoLocal.cs" />
+    <Compile Include="FreteDaFelicidade\FreteStrategy\Sedex.cs" />
+    <Compile Include="FreteDaFelicidade\TipoFrete.cs" />
+    <Compile Include="FreteDoDesespero\EntregaPedidos.cs" />
+    <Compile Include="FreteDoDesespero\TipoFrete.cs" />
+    <Compile Include="OdontogramaLegado\ImpressaoAnomalias.cs" />
+    <Compile Include="OdontogramaRefatorado\Anomalias\CoroaAusente.cs" />
+    <Compile Include="OdontogramaRefatorado\Anomalias\DenteIncluso.cs" />
+    <Compile Include="OdontogramaRefatorado\Anomalias\GiroVersao.cs" />
+    <Compile Include="OdontogramaRefatorado\Anomalias\RaizAusente.cs" />
+    <Compile Include="OdontogramaRefatorado\DadosAnomaliasDto.cs" />
+    <Compile Include="OdontogramaRefatorado\Anomalias\IAnomalia.cs" />
+    <Compile Include="OdontogramaRefatorado\FactoryImpressaoAnomalias.cs" />
+    <Compile Include="OdontogramaRefatorado\ImpressaoAnomaliaDto.cs" />
+    <Compile Include="OdontogramaRefatorado\ImpressaoAnomalias.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
