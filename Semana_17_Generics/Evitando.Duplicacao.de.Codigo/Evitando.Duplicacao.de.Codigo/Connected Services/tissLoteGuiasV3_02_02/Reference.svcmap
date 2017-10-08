@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="80e6b21c-a298-40ac-b116-6fa8af2230dc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://mga-apl039/QualidadeAgWeb/NonAuthenticatedServiceHost/tissLoteGuiasV3_02_02.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="tissLoteGuiasV3_02_02.xsd" MetadataType="Schema" ID="af1b305a-d78b-4e5e-9922-63c1900caef9" SourceId="1" SourceUrl="http://mga-apl039/QualidadeAgWeb/NonAuthenticatedServiceHost/tissLoteGuiasV3_02_02.svc?xsd=xsd2" />
+    <MetadataFile FileName="tissLoteGuias.wsdl" MetadataType="Wsdl" ID="6a44b81f-0c22-4052-a488-e4a9d97ad3c3" SourceId="1" SourceUrl="http://mga-apl039/QualidadeAgWeb/NonAuthenticatedServiceHost/tissLoteGuiasV3_02_02.svc?wsdl" />
+    <MetadataFile FileName="tissLoteGuiasV3_02_02.wsdl" MetadataType="Wsdl" ID="97736eb0-1f9a-4256-a524-0732f6d9ba46" SourceId="1" SourceUrl="http://mga-apl039/QualidadeAgWeb/NonAuthenticatedServiceHost/tissLoteGuiasV3_02_02.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="tissLoteGuiasV3_02_021.xsd" MetadataType="Schema" ID="ec71c7ae-6b81-4fc6-a350-3841e32de824" SourceId="1" SourceUrl="http://mga-apl039/QualidadeAgWeb/NonAuthenticatedServiceHost/tissLoteGuiasV3_02_02.svc?xsd=xsd0" />
+    <MetadataFile FileName="tissLoteGuiasV3_02_021.wsdl" MetadataType="Wsdl" ID="20196e28-b42e-4926-9e37-84cbfb39d920" SourceId="1" SourceUrl="http://mga-apl039/QualidadeAgWeb/NonAuthenticatedServiceHost/tissLoteGuiasV3_02_02.svc?wsdl=wsdl1" />
+    <MetadataFile FileName="tissLoteGuiasV3_02_02.disco" MetadataType="Disco" ID="cb90189e-6298-43c8-930a-7ee8bf124557" SourceId="1" SourceUrl="http://mga-apl039/QualidadeAgWeb/NonAuthenticatedServiceHost/tissLoteGuiasV3_02_02.svc?disco" />
+    <MetadataFile FileName="tissLoteGuiasV3_02_022.xsd" MetadataType="Schema" ID="50042fa6-eddf-488a-843c-6e2384c3e31a" SourceId="1" SourceUrl="http://mga-apl039/QualidadeAgWeb/NonAuthenticatedServiceHost/tissLoteGuiasV3_02_02.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

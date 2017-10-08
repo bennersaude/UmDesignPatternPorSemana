@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.ans.gov.br/tiss/ws/tipos/tissloteguias/v30302" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="tissLoteGuias" targetNamespace="http://www.ans.gov.br/tiss/ws/tipos/tissloteguias/v30302" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://mga-apl039/QualidadeAgWeb/NonAuthenticatedServiceHost/tissLoteGuiasV3_03_02.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.ans.gov.br/tiss/ws/tipos/tissloteguias/v30302/Imports">
+      <xsd:import schemaLocation="http://mga-apl039/QualidadeAgWeb/NonAuthenticatedServiceHost/tissLoteGuiasV3_03_02.svc?xsd=xsd0" namespace="http://www.ans.gov.br/padroes/tiss/schemas" />
+      <xsd:import schemaLocation="http://mga-apl039/QualidadeAgWeb/NonAuthenticatedServiceHost/tissLoteGuiasV3_03_02.svc?xsd=xsd1" namespace="http://www.w3.org/2000/09/xmldsig#" />
+      <xsd:import schemaLocation="http://mga-apl039/QualidadeAgWeb/NonAuthenticatedServiceHost/tissLoteGuiasV3_03_02.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="tissLoteGuias_OperationRequest">
+    <wsdl:part xmlns:q1="http://www.ans.gov.br/padroes/tiss/schemas" name="loteGuiasWS" element="q1:loteGuiasWS" />
+  </wsdl:message>
+  <wsdl:message name="tissLoteGuias_OperationResponse">
+    <wsdl:part xmlns:q2="http://www.ans.gov.br/padroes/tiss/schemas" name="protocoloRecebimentoWS" element="q2:protocoloRecebimentoWS" />
+  </wsdl:message>
+  <wsdl:message name="tissLoteGuias_PortType_tissLoteGuias_Operation_tissFaultWS_FaultMessage">
+    <wsdl:part xmlns:q3="http://www.ans.gov.br/padroes/tiss/schemas" name="detail" element="q3:tissFaultWS" />
+  </wsdl:message>
+  <wsdl:portType name="tissLoteGuias_PortType">
+    <wsdl:operation name="tissLoteGuias_Operation">
+      <wsdl:input wsaw:Action="" name="tissLoteGuias_OperationRequest" message="tns:tissLoteGuias_OperationRequest" />
+      <wsdl:output wsaw:Action="http://www.ans.gov.br/tiss/ws/tipos/tissloteguias/v30302/tissLoteGuias_PortType/tissLoteGuias_OperationResponse" name="tissLoteGuias_OperationResponse" message="tns:tissLoteGuias_OperationResponse" />
+      <wsdl:fault wsaw:Action="" name="tissFaultWS" message="tns:tissLoteGuias_PortType_tissLoteGuias_Operation_tissFaultWS_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="tissLoteGuias">
+    <wsdl:port name="BasicHttpBinding_tissLoteGuias_PortType" binding="i0:BasicHttpBinding_tissLoteGuias_PortType">
+      <soap:address location="http://mga-apl039/QualidadeAgWeb/NonAuthenticatedServiceHost/tissLoteGuiasV3_03_02.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
