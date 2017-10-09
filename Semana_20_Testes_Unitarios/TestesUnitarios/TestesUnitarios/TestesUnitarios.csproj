@@ -52,6 +52,10 @@
     <Compile Include="1.LojaVirtual\PrimeiroTeste\Program.cs" />
     <Compile Include="1.LojaVirtual\PrimeiroTeste\TestaMaiorEMenor.cs" />
     <Compile Include="1.LojaVirtual\PrimeiroTeste\TestaMaiorEMenorReordenado.cs" />
+    <Compile Include="2.CalculoSalario\Cargo.cs" />
+    <Compile Include="2.CalculoSalario\Funcionario.cs" />
+    <Compile Include="3.CarrinhoCompras\CarrinhoCompras.cs" />
+    <Compile Include="3.CarrinhoCompras\Item.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
