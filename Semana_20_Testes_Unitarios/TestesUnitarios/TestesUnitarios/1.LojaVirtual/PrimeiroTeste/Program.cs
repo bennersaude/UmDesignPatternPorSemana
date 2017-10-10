@@ -10,8 +10,8 @@ namespace TestesUnitarios._1.LojaVirtual.PrimeiroTeste
     {
         static void Main(String[] args)
         {
-            TestaMaiorEMenor.Testar();
-            //TestaMaiorEMenorReordenado.Testar();
+            //TestaMaiorEMenor.Testar();
+            TestaMaiorEMenorReordenado.Testar();
             Console.ReadKey();
         }
     }
