@@ -6,16 +6,8 @@ namespace TestesUnitarios.Tests._1.LojaVirtual.Validacao.Asserts
     [TestFixture]
     public class TestCase
     {
-        [TestCase(
-            typeof(ParametrosSistemaEntidade),
-            false,
-            TestName = "Deve retornar parametros que acessam o banco"
-        )]
-        [TestCase(
-            typeof(ParametrosSistemaLocal),
-            true,
-            TestName = "Deve retornar parametros fakes"
-        )]
+        [TestCase(typeof(ParametrosSistemaEntidade), false, TestName = "Deve retornar parametros que acessam o banco")]
+        [TestCase(typeof(ParametrosSistemaLocal), true, TestName = "Deve retornar parametros fakes")]
         public void Deve_retornar_parametros_corretamente(Type expected, bool debug)
         {
             var factory = new FactoryParametrosSistemas();
