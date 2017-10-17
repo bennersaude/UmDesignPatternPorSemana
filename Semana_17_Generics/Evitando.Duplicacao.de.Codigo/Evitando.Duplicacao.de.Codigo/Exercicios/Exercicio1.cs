@@ -2,75 +2,54 @@
 
 namespace Evitando.Duplicacao.de.Codigo.Exercicios
 {
-    // Exercicio 1: Precisamos preencher as informações de contato do prestador, 
+    // Exercicio 1: Precisamos preencher as informações de contato do prestador,
     // beneficiário e contratante em um dto, atualmente nosso código esta duplicado
     // para cada uma das entidades, como podemos melhorar isso?
 
-    public class Prestador : Entidade<Prestador>
+    public interface IContato
+    {
+        string Email { get; set; }
+        string Telefone { get; set; }
+        string Endereco { get; set; }
+    }
+
+    public class Prestador : Entidade<Prestador>, IContato
     {
         public string Email { get; set; }
-
         public string Telefone { get; set; }
-
         public string Endereco { get; set; }
     }
 
-    public class Beneficiario : Entidade<Beneficiario>
+    public class Beneficiario : Entidade<Beneficiario>, IContato
     {
         public string Email { get; set; }
-
         public string Telefone { get; set; }
-
         public string Endereco { get; set; }
     }
 
-    public class Contratante : Entidade<Contratante>
+    public class Contratante : Entidade<Contratante>, IContato
     {
         public string Email { get; set; }
-
         public string Telefone { get; set; }
-
         public string Endereco { get; set; }
     }
 
-    public class ContatoDto
+    public class ContatoDto : IContato
     {
         public string Email { get; set; }
-
         public string Telefone { get; set; }
-
         public string Endereco { get; set; }
     }
 
     public class InformacoesContato
     {
-        public ContatoDto ObterContato(Beneficiario beneficiario)
+        public IContato ObterContato(IContato contato)
         {
             return new ContatoDto
             {
-                Email = beneficiario.Email,
-                Endereco = beneficiario.Endereco,
-                Telefone = beneficiario.Telefone
-            };
-        }
-
-        public ContatoDto ObterContato(Prestador prestador)
-        {
-            return new ContatoDto
-            {
-                Email = prestador.Email,
-                Endereco = prestador.Endereco,
-                Telefone = prestador.Telefone
-            };
-        }
-
-        public ContatoDto ObterContato(Contratante contratante)
-        {
-            return new ContatoDto
-            {
-                Email = contratante.Email,
-                Endereco = contratante.Endereco,
-                Telefone = contratante.Telefone
+                Email = contato.Email,
+                Endereco = contato.Endereco,
+                Telefone = contato.Telefone
             };
         }
     }

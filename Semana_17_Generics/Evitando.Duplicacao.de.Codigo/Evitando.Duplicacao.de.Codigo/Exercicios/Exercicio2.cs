@@ -6,46 +6,44 @@ namespace Evitando.Duplicacao.de.Codigo.Exercicios
     // um periodo de dias, como podemos evitar a duplicacao
     // de codigo abaixo?
 
-    public class SincronizacaoExtratoUtilizacaoDto    
-    {
-        public long[] IdBeneficiarios { get; set; }
-        public string UrlRetorno { get; set; }
-        public DateTime DataInicial { get; set; }
-        public DateTime DataFinal { get; set; }
-    }
-
-    public class SincronizacaoProtocoloPendenteNfDto
-    {
-        public long[] ListaIdPrestadores { get; set; }
-        public string UrlRetorno { get; set; }
-        public DateTime DataInicial { get; set; }
-        public DateTime DataFinal { get; set; }
-    }
-
     public class SincronizacaoExtratoUtilizacao
     {
-        public SincronizacaoExtratoUtilizacaoDto ObterSincronizacao(int periodo, long[] beneficiarios)
+        public SincronizacaoListaUsuariosDataDTO ObterSincronizacao(int periodo, long[] beneficiarios)
         {
-            return new SincronizacaoExtratoUtilizacaoDto
-            {
-                IdBeneficiarios = beneficiarios,
-                DataInicial = DateTime.Now.AddDays(-periodo),
-                DataFinal = DateTime.Now,
-                UrlRetorno = "SincronizacaoExtratoUtilizacao"
-            };
+            return new SincronizacaoListaUsuariosData().ObterSincronizacao(periodo, beneficiarios, "SincronizacaoExtratoUtilizacao");
         }
     }
 
     public class SincronizacaoProtocoloPendenteNf
     {
-        public SincronizacaoProtocoloPendenteNfDto ObterSincronizacao(int periodo, long[] prestadores)
+        public SincronizacaoListaUsuariosDataDTO ObterSincronizacao(int periodo, long[] prestadores)
         {
-            return new SincronizacaoProtocoloPendenteNfDto
+            return new SincronizacaoListaUsuariosData().ObterSincronizacao(periodo, prestadores, "SincronizacaoProtocoloPendenteNf");
+        }
+    }
+
+    /*Estas classe é dispensável caso não aja particularidades na sincronização,
+        podendo ser realizada a chamada da classe "SincronizacaoListaUsuariosData" diretamente no controller.
+    */
+
+    public class SincronizacaoListaUsuariosDataDTO
+    {
+        public long[] ListaUsuarios { get; set; }
+        public string UrlRetorno { get; set; }
+        public DateTime DataInicial { get; set; }
+        public DateTime DataFinal { get; set; }
+    }
+
+    public class SincronizacaoListaUsuariosData
+    {
+        public SincronizacaoListaUsuariosDataDTO ObterSincronizacao(int periodo, long[] prestadores, string uriRetorno)
+        {
+            return new SincronizacaoListaUsuariosDataDTO
             {
-                ListaIdPrestadores = prestadores,
+                ListaUsuarios = prestadores,
                 DataInicial = DateTime.Now.AddDays(-periodo),
                 DataFinal = DateTime.Now,
-                UrlRetorno = "SincronizacaoProtocoloPendenteNf"
+                UrlRetorno = uriRetorno
             };
         }
     }
