@@ -13,7 +13,7 @@
                 {
                     Menor = produto;
                 }
-                else if (Maior == null || produto.Valor > Maior.Valor)
+                if (Maior == null || produto.Valor > Maior.Valor)
                 {
                     Maior = produto;
                 }

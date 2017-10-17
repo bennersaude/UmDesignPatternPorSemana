@@ -56,6 +56,10 @@
     <Compile Include="2.CalculoSalario\Funcionario.cs" />
     <Compile Include="3.CarrinhoCompras\CarrinhoCompras.cs" />
     <Compile Include="3.CarrinhoCompras\Item.cs" />
+    <Compile Include="4.NotaFiscal\Envio.cs" />
+    <Compile Include="4.NotaFiscal\NotaFiscal.cs" />
+    <Compile Include="4.NotaFiscal\NotaFiscalDao.cs" />
+    <Compile Include="4.NotaFiscal\Pedido.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
