@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>TestesUnitarios._1.LojaVirtual.PrimeiroTeste.Program</StartupObject>
+    <StartupObject>TestesUnitarios.LojaVirtual.PrimeiroTeste.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,21 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="1.LojaVirtual\PrimeiroTeste\CarrinhoDeCompras.cs" />
-    <Compile Include="1.LojaVirtual\PrimeiroTeste\MaiorEMenor.cs" />
-    <Compile Include="1.LojaVirtual\PrimeiroTeste\Produto.cs" />
-    <Compile Include="1.LojaVirtual\PrimeiroTeste\Program.cs" />
-    <Compile Include="1.LojaVirtual\PrimeiroTeste\TestaMaiorEMenor.cs" />
-    <Compile Include="1.LojaVirtual\PrimeiroTeste\TestaMaiorEMenorReordenado.cs" />
-    <Compile Include="2.CalculoSalario\Cargo.cs" />
-    <Compile Include="2.CalculoSalario\Funcionario.cs" />
-    <Compile Include="3.CarrinhoCompras\CarrinhoCompras.cs" />
-    <Compile Include="3.CarrinhoCompras\Item.cs" />
-    <Compile Include="4.NotaFiscal\Envio.cs" />
-    <Compile Include="4.NotaFiscal\NotaFiscal.cs" />
-    <Compile Include="4.NotaFiscal\NotaFiscalDao.cs" />
-    <Compile Include="4.NotaFiscal\Pedido.cs" />
+    <Compile Include="LojaVirtual\PrimeiroTeste\CarrinhoDeCompras.cs" />
+    <Compile Include="LojaVirtual\PrimeiroTeste\MaiorEMenor.cs" />
+    <Compile Include="LojaVirtual\PrimeiroTeste\Produto.cs" />
+    <Compile Include="LojaVirtual\PrimeiroTeste\Program.cs" />
+    <Compile Include="LojaVirtual\PrimeiroTeste\TestaMaiorEMenor.cs" />
+    <Compile Include="LojaVirtual\PrimeiroTeste\TestaMaiorEMenorReordenado.cs" />
+    <Compile Include="CalculoSalario\CalculoraSalario.cs" />
+    <Compile Include="CalculoSalario\Cargo.cs" />
+    <Compile Include="CalculoSalario\Funcionario.cs" />
+    <Compile Include="CarrinhoCompras\CalculadoraCarrinho.cs" />
+    <Compile Include="CarrinhoCompras\CarrinhoCompras.cs" />
+    <Compile Include="CarrinhoCompras\Item.cs" />
+    <Compile Include="NotaFiscal\Envio.cs" />
+    <Compile Include="NotaFiscal\NotaFiscal.cs" />
+    <Compile Include="NotaFiscal\NotaFiscalDao.cs" />
+    <Compile Include="NotaFiscal\Pedido.cs" />
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="NumerosRomanos\ConversorNumerosRomanos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
