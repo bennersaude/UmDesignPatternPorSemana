@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿namespace TestesUnitarios.CalculoSalario
 {
     public enum Cargo
@@ -6,3 +7,13 @@
         DBA
     }
 }
+=======
+﻿namespace TestesUnitarios.CalculoSalario
+{
+    public enum Cargo
+    {
+        DESENVOLVEDOR,
+        DBA,
+        TESTADOR
+    }}
+>>>>>>> testes-unitarios

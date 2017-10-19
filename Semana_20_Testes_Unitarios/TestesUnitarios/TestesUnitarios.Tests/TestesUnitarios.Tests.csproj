@@ -28,6 +28,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>5</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -44,9 +45,6 @@
     <Reference Include="FluentAssertions.Core, Version=4.19.4.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
       <HintPath>..\packages\FluentAssertions.4.19.4\lib\net45\FluentAssertions.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <Private>False</Private>
-    </Reference>
     <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
     </Reference>
@@ -56,15 +54,16 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="1.LojaVirtual\PrimeiroTeste\MaiorEMenorTests.cs" />
-    <Compile Include="1.LojaVirtual\Validacao\Asserts\Asserts.cs" />
-    <Compile Include="1.LojaVirtual\Validacao\Asserts\FactoryParametrosSistemas.cs" />
-    <Compile Include="1.LojaVirtual\Validacao\Asserts\Pessoa.cs" />
-    <Compile Include="1.LojaVirtual\Validacao\Asserts\TestCase.cs" />
-    <Compile Include="1.LojaVirtual\Validacao\Asserts\TestCaseSource.cs" />
-    <Compile Include="1.LojaVirtual\Validacao\FluentAssertions\FluentAssertions.cs" />
-    <Compile Include="2.NumerosRomanos\NumeroRomanoTests.cs" />
-    <Compile Include="CalculoSalario\CalculoSalarioTests.cs" />
+    <Compile Include="LojaVirtual\PrimeiroTeste\MaiorEMenorTests.cs" />
+    <Compile Include="LojaVirtual\Validacao\Asserts\Asserts.cs" />
+    <Compile Include="LojaVirtual\Validacao\Asserts\FactoryParametrosSistemas.cs" />
+    <Compile Include="LojaVirtual\Validacao\Asserts\Pessoa.cs" />
+    <Compile Include="LojaVirtual\Validacao\Asserts\TestCase.cs" />
+    <Compile Include="LojaVirtual\Validacao\Asserts\TestCaseSource.cs" />
+    <Compile Include="LojaVirtual\Validacao\FluentAssertions\FluentAssertions.cs" />
+    <Compile Include="CalculoSalario\CalculadoraSalarioTests.cs" />
+    <Compile Include="CarrinhoCompras\CalculadoraCarrinhoTests.cs" />
+    <Compile Include="NumerosRomanos\ConversorNumerosRomanosTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

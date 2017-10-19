@@ -1,12 +1,14 @@
-﻿namespace TestesUnitarios.CalculoSalario
+﻿using System;
+
+namespace TestesUnitarios.CalculoSalario
 {
     public class Funcionario
     {
-        public Cargo Cargo { get; set; }
-        public string Nome { get; set; }
-        public double Salario { get; set; }
+        public String Nome { get; private set; }
+        public double Salario { get; private set; }
+        public Cargo Cargo { get; private set; }
 
-        public Funcionario(string nome, double salario, Cargo cargo)
+        public Funcionario(String nome, double salario, Cargo cargo)
         {
             this.Nome = nome;
             this.Salario = salario;
