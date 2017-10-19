@@ -56,7 +56,11 @@
     <Compile Include="2.CalculoSalario\Funcionario.cs" />
     <Compile Include="3.CarrinhoCompras\CarrinhoCompras.cs" />
     <Compile Include="3.CarrinhoCompras\Item.cs" />
+    <Compile Include="CalculoSalario\CalculadoraSalario.cs" />
+    <Compile Include="CalculoSalario\Cargo.cs" />
+    <Compile Include="CalculoSalario\Funcionario.cs" />
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="NumeroRomano\ConversorNumeroRomano.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
