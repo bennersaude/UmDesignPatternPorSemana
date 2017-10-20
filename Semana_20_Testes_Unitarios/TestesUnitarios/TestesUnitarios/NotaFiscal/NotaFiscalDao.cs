@@ -3,7 +3,7 @@
 namespace TestesUnitarios.NotaFiscal
 {
 
-    public class NotaFiscalDao
+    public class NotaFiscalDao : INotaFiscalDao
     {
         public void Salvar(NotaFiscal nota)
         {

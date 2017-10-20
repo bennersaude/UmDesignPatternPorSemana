@@ -4,14 +4,13 @@ using TestesUnitarios.CarrinhoCompras;
 namespace TestesUnitarios.Tests.CarrinhoCompras
 {
     [TestFixture]
-    public class CalculadoraCarrinhoTests
+    public class CarrinhoComprasListaTests
     {
         [Test]
         public void Deve_retornar_0_se_carrinho_vazio()
         {
             var carrinho = new CarrinhoComprasLista();
-            var calculadora = new CalculadoraCarrinho();
-            var actual = calculadora.ObterMaiorValor(carrinho);
+            var actual = carrinho.ObterMaiorValor();
 
             Assert.AreEqual(0, actual);
         }
@@ -21,8 +20,7 @@ namespace TestesUnitarios.Tests.CarrinhoCompras
         {
             var expected = new Item("Itaipava", 3, 1.99);
             var carrinho = new CarrinhoComprasLista() { expected };
-            var calculadora = new CalculadoraCarrinho();
-            var actual = calculadora.ObterMaiorValor(carrinho);
+            var actual = carrinho.ObterMaiorValor();
 
             Assert.AreEqual(expected.ValorTotal, actual);
         }
@@ -33,8 +31,7 @@ namespace TestesUnitarios.Tests.CarrinhoCompras
             var item = new Item("Itaipava", 3, 1.99);
             var expected = new Item("Doritos", 3, 6);
             var carrinho = new CarrinhoComprasLista() { item, expected };
-            var calculadora = new CalculadoraCarrinho();
-            var actual = calculadora.ObterMaiorValor(carrinho);
+            var actual = carrinho.ObterMaiorValor();
 
             Assert.AreEqual(expected.ValorTotal, actual);
         }

@@ -2,7 +2,7 @@
 
 namespace TestesUnitarios.NotaFiscal
 {
-    public class Envio
+    public class Envio : IEnvio
     {
         public void EnviarEmail(NotaFiscal nota)
         {

@@ -46,6 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EnvioLote\Evento.cs" />
+    <Compile Include="EnvioLote\Guia.cs" />
+    <Compile Include="EnvioLote\Lote.cs" />
+    <Compile Include="EnvioLote\LoteDao.cs" />
+    <Compile Include="EnvioLote\RespostaEnvioLoteDto.cs" />
+    <Compile Include="EnvioLote\RespostaEnvioLoteGuiaDto.cs" />
+    <Compile Include="EnvioLote\ServicoEnvioLote.cs" />
+    <Compile Include="EnvioLote\ValidacaoDto.cs" />
     <Compile Include="LojaVirtual\PrimeiroTeste\CarrinhoDeCompras.cs" />
     <Compile Include="LojaVirtual\PrimeiroTeste\MaiorEMenor.cs" />
     <Compile Include="LojaVirtual\PrimeiroTeste\Produto.cs" />
@@ -58,7 +66,12 @@
     <Compile Include="CarrinhoCompras\CalculadoraCarrinho.cs" />
     <Compile Include="CarrinhoCompras\CarrinhoCompras.cs" />
     <Compile Include="CarrinhoCompras\Item.cs" />
+    <Compile Include="NotaFiscal\CalculadoraNotaFiscal.cs" />
     <Compile Include="NotaFiscal\Envio.cs" />
+    <Compile Include="NotaFiscal\GeracaoNotaFiscal.cs" />
+    <Compile Include="NotaFiscal\ICalculadoraNotaFiscal.cs" />
+    <Compile Include="NotaFiscal\IEnvio.cs" />
+    <Compile Include="NotaFiscal\INotaFiscalDao.cs" />
     <Compile Include="NotaFiscal\NotaFiscal.cs" />
     <Compile Include="NotaFiscal\NotaFiscalDao.cs" />
     <Compile Include="NotaFiscal\Pedido.cs" />
