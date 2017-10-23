@@ -59,6 +59,11 @@
     <Compile Include="CarrinhoCompras\CarrinhoCompras.cs" />
     <Compile Include="CarrinhoCompras\Item.cs" />
     <Compile Include="NotaFiscal\Envio.cs" />
+    <Compile Include="NotaFiscal\CalculadoraNotaFiscal.cs" />
+    <Compile Include="NotaFiscal\GeracaoNotaFiscal.cs" />
+    <Compile Include="NotaFiscal\ICalculadoraNotaFiscal.cs" />
+    <Compile Include="NotaFiscal\IEnvio.cs" />
+    <Compile Include="NotaFiscal\INotaFiscalDao.cs" />
     <Compile Include="NotaFiscal\NotaFiscal.cs" />
     <Compile Include="NotaFiscal\NotaFiscalDao.cs" />
     <Compile Include="NotaFiscal\Pedido.cs" />

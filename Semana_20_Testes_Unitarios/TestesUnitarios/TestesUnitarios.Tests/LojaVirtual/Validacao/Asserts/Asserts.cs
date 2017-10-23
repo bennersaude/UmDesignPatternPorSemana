@@ -45,11 +45,7 @@ namespace TestesUnitarios.Tests.LojaVirtual.Validacao.Asserts
             Assert.IsNotNull(produto);
             Assert.IsNotNullOrEmpty("huehue");
 
-<<<<<<< HEAD:Semana_20_Testes_Unitarios/TestesUnitarios/TestesUnitarios.Tests/1.LojaVirtual/Validacao/Asserts/Asserts.cs
-            Assert.Throws<ArgumentNullException>(() => { throw new ArgumentNullException(); });
-=======
             Assert.Throws<ArgumentNullException>(() => factory.ObterParametros(true));
->>>>>>> testes-unitarios:Semana_20_Testes_Unitarios/TestesUnitarios/TestesUnitarios.Tests/LojaVirtual/Validacao/Asserts/Asserts.cs
         }
     }
 }
