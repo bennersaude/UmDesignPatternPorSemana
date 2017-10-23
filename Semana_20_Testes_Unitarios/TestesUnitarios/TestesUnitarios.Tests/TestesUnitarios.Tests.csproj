@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LojaVirtual\PrimeiroTeste\MaiorEMenorTests.cs" />
+    <Compile Include="LojaVirtual\Transporte\FreteTests.cs" />
     <Compile Include="LojaVirtual\Validacao\Asserts\Asserts.cs" />
     <Compile Include="LojaVirtual\Validacao\Asserts\FactoryParametrosSistemas.cs" />
     <Compile Include="LojaVirtual\Validacao\Asserts\Pessoa.cs" />

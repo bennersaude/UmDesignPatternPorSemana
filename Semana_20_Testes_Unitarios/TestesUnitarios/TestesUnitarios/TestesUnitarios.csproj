@@ -59,6 +59,7 @@
     <Compile Include="CarrinhoCompras\CarrinhoCompras.cs" />
     <Compile Include="CarrinhoCompras\Item.cs" />
     <Compile Include="NotaFiscal\Envio.cs" />
+    <Compile Include="LojaVirtual\Transporte\CalculadoraFrete.cs" />
     <Compile Include="NotaFiscal\CalculadoraNotaFiscal.cs" />
     <Compile Include="NotaFiscal\GeracaoNotaFiscal.cs" />
     <Compile Include="NotaFiscal\ICalculadoraNotaFiscal.cs" />
