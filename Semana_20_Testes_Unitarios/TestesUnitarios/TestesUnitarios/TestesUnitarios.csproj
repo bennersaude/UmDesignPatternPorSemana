@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculoFrete\CalculoFrete.cs" />
+    <Compile Include="CalculoFrete\TipoFrete.cs" />
     <Compile Include="EnvioLote\Evento.cs" />
     <Compile Include="EnvioLote\Guia.cs" />
     <Compile Include="EnvioLote\Lote.cs" />
