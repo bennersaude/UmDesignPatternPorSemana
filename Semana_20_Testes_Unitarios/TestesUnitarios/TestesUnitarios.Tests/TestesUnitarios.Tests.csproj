@@ -57,6 +57,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculoFrete\CalculadoraFreteTests.cs" />
     <Compile Include="CarrinhoCompras\CarrinhoComprasListaTests.cs" />
     <Compile Include="LojaVirtual\PrimeiroTeste\MaiorEMenorTests.cs" />
     <Compile Include="LojaVirtual\Validacao\Asserts\Asserts.cs" />

@@ -46,6 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculoFrete\CalculadoraFretesTemplate\CalculadoraFreteTemplate.cs" />
+    <Compile Include="CalculoFrete\CalculadoraFretesTemplate\Classes\CalculadoraFreteRetiradaLocalTemplate.cs" />
+    <Compile Include="CalculoFrete\CalculadoraFretesTemplate\Classes\CalculadoraFreteViaPACTemplate.cs" />
+    <Compile Include="CalculoFrete\CalculadoraFretesTemplate\Classes\CalculadoraFreteViaSedexTemplate.cs" />
+    <Compile Include="CalculoFrete\CalculadoraFretesTemplate\Classes\CalculadoraFreteViaTransportadoraTemplate.cs" />
+    <Compile Include="CalculoFrete\CalculadoraFretesTemplate\Factory\CalculadoraFreteTemplateFactory.cs" />
+    <Compile Include="CalculoFrete\Enum\TipoFrete.cs" />
+    <Compile Include="CalculoFrete\CalculadoraFretes\CalculadoraFrete.cs" />
+    <Compile Include="CalculoFrete\ICalculadoraFrete.cs" />
     <Compile Include="EnvioLote\Evento.cs" />
     <Compile Include="EnvioLote\Guia.cs" />
     <Compile Include="EnvioLote\Lote.cs" />
