@@ -9,7 +9,7 @@ namespace TestesUnitarios.EnvioLote
 
     public class RespostaEnvioLoteDto
     {
-        public IEnumerable<string> GlosasLote { get; set; }
+        public IList<string> GlosasLote { get; set; }
         public IEnumerable<RespostaEnvioLoteGuiaDto> GlosasGuia { get; set; }
     }
 }

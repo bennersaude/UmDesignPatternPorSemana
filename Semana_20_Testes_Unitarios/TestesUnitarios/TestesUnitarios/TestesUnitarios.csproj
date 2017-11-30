@@ -48,12 +48,22 @@
   <ItemGroup>
     <Compile Include="EnvioLote\Evento.cs" />
     <Compile Include="EnvioLote\Guia.cs" />
+    <Compile Include="EnvioLote\ILoteDao.cs" />
+    <Compile Include="EnvioLote\IServicoEnvioLote.cs" />
     <Compile Include="EnvioLote\Lote.cs" />
     <Compile Include="EnvioLote\LoteDao.cs" />
+    <Compile Include="EnvioLote\RepositorioLote.cs" />
     <Compile Include="EnvioLote\RespostaEnvioLoteDto.cs" />
     <Compile Include="EnvioLote\RespostaEnvioLoteGuiaDto.cs" />
     <Compile Include="EnvioLote\ServicoEnvioLote.cs" />
     <Compile Include="EnvioLote\ValidacaoDto.cs" />
+    <Compile Include="EnvioLote\ValidacaoLote\IValidacaoLote.cs" />
+    <Compile Include="EnvioLote\ValidacaoLote\IValidacaoLoteGuias.cs" />
+    <Compile Include="EnvioLote\ValidacaoLote\ValidacaoLote.cs" />
+    <Compile Include="EnvioLote\ValidacaoLote\ValidacoesLoteFactory.cs" />
+    <Compile Include="EnvioLote\ValidacaoLote\ValidarGuiasSemEvento.cs" />
+    <Compile Include="EnvioLote\ValidacaoLote\ValidarQuantidadeEventoZerada.cs" />
+    <Compile Include="EnvioLote\ValidacaoLote\ValidarQuantidadeGuiasLote.cs" />
     <Compile Include="LojaVirtual\PrimeiroTeste\CarrinhoDeCompras.cs" />
     <Compile Include="LojaVirtual\PrimeiroTeste\MaiorEMenor.cs" />
     <Compile Include="LojaVirtual\PrimeiroTeste\Produto.cs" />

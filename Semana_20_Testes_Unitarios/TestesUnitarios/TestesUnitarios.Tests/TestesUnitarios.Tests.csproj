@@ -58,6 +58,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CarrinhoCompras\CarrinhoComprasListaTests.cs" />
+    <Compile Include="EnvioLote\RepositorioLoteTests.cs" />
+    <Compile Include="EnvioLote\ValidacaoLote\ValidacaoLoteTests.cs" />
+    <Compile Include="EnvioLote\ValidacaoLote\ValidarGuiasSemEventoTests.cs" />
+    <Compile Include="EnvioLote\ValidacaoLote\ValidarQuantidadeEventoZeradaTests.cs" />
+    <Compile Include="EnvioLote\ValidacaoLote\ValidarQuantidadeGuiasLoteTests.cs" />
     <Compile Include="LojaVirtual\PrimeiroTeste\MaiorEMenorTests.cs" />
     <Compile Include="LojaVirtual\Validacao\Asserts\Asserts.cs" />
     <Compile Include="LojaVirtual\Validacao\Asserts\FactoryParametrosSistemas.cs" />

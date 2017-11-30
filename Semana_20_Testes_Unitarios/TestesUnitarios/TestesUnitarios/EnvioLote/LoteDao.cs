@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestesUnitarios.EnvioLote
 {
-    public class LoteDao
+    public class LoteDao : ILoteDao
     {
         public void Salvar(Lote lote)
         {

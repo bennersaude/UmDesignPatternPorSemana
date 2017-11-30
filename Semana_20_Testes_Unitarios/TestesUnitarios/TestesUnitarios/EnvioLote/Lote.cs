@@ -8,7 +8,12 @@ namespace TestesUnitarios.EnvioLote
 {
     public class Lote
     {
-        public IEnumerable<Guia> Guias { get; set; }
+        public Lote()
+        {
+            Guias = new List<Guia>();
+        }
+
+        public IList<Guia> Guias { get; set; }
         public IEnumerable<string> Glosas { get; set; }
     }
 }
