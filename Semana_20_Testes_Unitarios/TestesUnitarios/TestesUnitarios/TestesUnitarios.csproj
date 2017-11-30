@@ -46,6 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculoFrete\CalculoFrete.cs" />
+    <Compile Include="CalculoFrete\ICalculoFrete.cs" />
+    <Compile Include="CalculoFrete\ITipoFreteFactory.cs" />
+    <Compile Include="CalculoFrete\TipoFreteFactory.cs" />
+    <Compile Include="CalculoFrete\TiposFrete\Transportadora.cs" />
+    <Compile Include="CalculoFrete\TiposFrete\RetiradaDoLocal.cs" />
+    <Compile Include="CalculoFrete\TiposFrete\Sedex.cs" />
+    <Compile Include="CalculoFrete\TiposFrete\PAC.cs" />
+    <Compile Include="CalculoFrete\TiposFrete\TipoFreteBase.cs" />
+    <Compile Include="CalculoFrete\TiposFrete\TiposFreteEnum.cs" />
     <Compile Include="EnvioLote\Evento.cs" />
     <Compile Include="EnvioLote\Guia.cs" />
     <Compile Include="EnvioLote\Lote.cs" />
