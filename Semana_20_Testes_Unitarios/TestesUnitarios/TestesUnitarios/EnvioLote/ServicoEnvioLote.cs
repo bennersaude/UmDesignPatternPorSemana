@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace TestesUnitarios.EnvioLote
 {
 
-    public class ServicoEnvioLote : IServicoEnvioLote
+    public class ServicoEnvioLote
     {
         public RespostaEnvioLoteDto Enviar(Lote lote)
         {

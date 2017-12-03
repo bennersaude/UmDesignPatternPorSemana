@@ -46,23 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalculoFrete\CalculadoraFrete.cs" />
-    <Compile Include="CalculoFrete\TipoFrete.cs" />
     <Compile Include="EnvioLote\Evento.cs" />
     <Compile Include="EnvioLote\Guia.cs" />
-    <Compile Include="EnvioLote\ILote.cs" />
-    <Compile Include="EnvioLote\ISalvarLoteGuias.cs" />
-    <Compile Include="EnvioLote\IServicoEnvioLote.cs" />
-    <Compile Include="EnvioLote\IValidacaoLoteGuias.cs" />
     <Compile Include="EnvioLote\Lote.cs" />
     <Compile Include="EnvioLote\LoteDao.cs" />
     <Compile Include="EnvioLote\RespostaEnvioLoteDto.cs" />
     <Compile Include="EnvioLote\RespostaEnvioLoteGuiaDto.cs" />
-    <Compile Include="EnvioLote\SalvarLoteGuias.cs" />
-    <Compile Include="EnvioLote\ServicoLoteGuias.cs" />
     <Compile Include="EnvioLote\ServicoEnvioLote.cs" />
     <Compile Include="EnvioLote\ValidacaoDto.cs" />
-    <Compile Include="EnvioLote\ValidacaoLoteGuias.cs" />
     <Compile Include="LojaVirtual\PrimeiroTeste\CarrinhoDeCompras.cs" />
     <Compile Include="LojaVirtual\PrimeiroTeste\MaiorEMenor.cs" />
     <Compile Include="LojaVirtual\PrimeiroTeste\Produto.cs" />
