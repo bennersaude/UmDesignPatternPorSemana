@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestesUnitarios.EnvioLote
 {
-    public class Lote
+    public class Lote : ILote
     {
         public IEnumerable<Guia> Guias { get; set; }
         public IEnumerable<string> Glosas { get; set; }
