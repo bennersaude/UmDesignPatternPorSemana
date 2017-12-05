@@ -38,7 +38,7 @@ namespace TestesUnitarios.Tests.NotaFiscal
             envio = Substitute.For<IEnvio>();
             dao = Substitute.For<INotaFiscalDao>();
             dao.When(x => x.Salvar(Arg.Any<NotaFiscalModel>()))
-               .Do(args => PreencherNotaSalva(args, actual));
+               .Do(args => actual = args.Arg<NotaFiscalModel>());
 
             gerador = new GeracaoNotaFiscal(calculadora, envio, dao);
         }
@@ -54,20 +54,6 @@ namespace TestesUnitarios.Tests.NotaFiscal
 
             envio.Received(1).EnviarEmail(actual);
             actual.ShouldBeEquivalentTo(expected);
-        }
-
-        public void outroteste()
-        {
-            calculadora.Calcular(Arg.Any<Pedido>()).Returns(95);
-        }
-
-        private void PreencherNotaSalva(CallInfo args, NotaFiscalModel actual)
-        {
-            var nota = args.Arg<NotaFiscalModel>();
-
-            if (nota == null) actual = null;
-
-            actual = args.Arg<NotaFiscalModel>();
         }
     }
 }

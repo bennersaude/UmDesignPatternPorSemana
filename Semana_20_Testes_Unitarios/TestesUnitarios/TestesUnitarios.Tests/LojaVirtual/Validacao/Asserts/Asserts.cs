@@ -44,8 +44,6 @@ namespace TestesUnitarios.Tests.LojaVirtual.Validacao.Asserts
             Assert.IsNull(null);
             Assert.IsNotNull(produto);
             Assert.IsNotNullOrEmpty("huehue");
-
-            Assert.Throws<ArgumentNullException>(() => factory.ObterParametros(true));
         }
     }
 }
