@@ -64,6 +64,9 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Avaliacao\Business\Validacao\ValidacaoDespesasTests.cs" />
+    <Compile Include="Avaliacao\Business\Validacao\ValidacaoGuiaTests.cs" />
+    <Compile Include="Avaliacao\Entidades\GuiaMock.cs" />
     <Compile Include="CarrinhoCompras\CarrinhoComprasListaTests.cs" />
     <Compile Include="LojaVirtual\PrimeiroTeste\MaiorEMenorTests.cs" />
     <Compile Include="LojaVirtual\Validacao\Asserts\Asserts.cs" />
@@ -83,9 +86,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Avaliacao\Business\" />
     <Folder Include="Avaliacao\Dao\" />
-    <Folder Include="Avaliacao\Entidades\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TestesUnitarios\TestesUnitarios.csproj">

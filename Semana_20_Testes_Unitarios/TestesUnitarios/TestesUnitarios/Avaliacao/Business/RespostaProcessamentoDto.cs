@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace TestesUnitarios.Avaliacao.Business
 {
@@ -6,6 +7,6 @@ namespace TestesUnitarios.Avaliacao.Business
     {
         public bool Sucesso { get; set; }
         public long? Handle { get; set; }
-        public IEnumerable<string> Erros { get; set; }
+        public IEnumerable<Exception> Erros { get; set; }
     }
 }
