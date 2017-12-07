@@ -20,6 +20,7 @@ namespace TestesUnitarios.Tests.Avaliacao.Business
         private IGuiaProperties guiaPropertiesFalhaValidacao;
         private IGuiaProperties guiaPropertiesFalhaServico;
         private IGuiaProperties guiaPropertiesCorreta;
+        private IGuiaProperties guiaRetornoSave;
         private IList<string> erros;
 
         [TestFixtureSetUp]
@@ -36,6 +37,8 @@ namespace TestesUnitarios.Tests.Avaliacao.Business
 
             guiaPropertiesFalhaServico = Substitute.For<IGuiaProperties>();
             guiaPropertiesFalhaValidacao.Handle = 3;
+
+            guiaRetornoSave = Substitute.For<IGuiaProperties>();
 
             erros = new List<string>()
             {
@@ -55,6 +58,8 @@ namespace TestesUnitarios.Tests.Avaliacao.Business
             servicoEnvioGuias.EnviarGuia(guiaPropertiesFalhaServico).Returns(respostaDto);
 
             guiaDao = Substitute.For<IDao<IGuiaProperties>>();
+
+            guiaDao.When(x => x.Save<Guia>(Arg.Any<IGuiaProperties>())).Do(args => guiaRetornoSave = args.Arg<IGuiaProperties>());
 
             var respostaServico = new RespostaServicoDto
             {
@@ -86,6 +91,8 @@ namespace TestesUnitarios.Tests.Avaliacao.Business
             var resposta = ProcessarGuia.Processar(guiaPropertiesCorreta);
 
             resposta.ShouldBeEquivalentTo(expected);
+
+            guiaRetornoSave.ShouldBeEquivalentTo(guiaPropertiesCorreta);
         }
 
         [Test]
@@ -112,8 +119,6 @@ namespace TestesUnitarios.Tests.Avaliacao.Business
             };
 
             var resposta = ProcessarGuia.Processar(guiaPropertiesFalhaServico);
-
-
 
             resposta.ShouldBeEquivalentTo(expected);
         }
