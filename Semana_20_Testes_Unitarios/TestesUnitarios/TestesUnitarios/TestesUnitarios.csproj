@@ -53,14 +53,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Avaliacao\Business\FactoryValidacaoGuia.cs" />
+    <Compile Include="Avaliacao\Business\ProcessamentoGuia.cs" />
     <Compile Include="Avaliacao\Business\RespostaProcessamentoDto.cs" />
     <Compile Include="Avaliacao\Business\RespostaServicoDto.cs" />
     <Compile Include="Avaliacao\Business\ServicoEnvioGuias.cs" />
+    <Compile Include="Avaliacao\Business\ValidacaoGuia.cs" />
     <Compile Include="Avaliacao\Dao\Dao.cs" />
     <Compile Include="Avaliacao\Dao\DespesasGuiaDao.cs" />
+    <Compile Include="Avaliacao\Dao\FactoryGuiaDAO.cs" />
+    <Compile Include="Avaliacao\Dao\GuiaDAO.cs" />
     <Compile Include="Avaliacao\Dao\IDao.cs" />
+    <Compile Include="Avaliacao\Dao\IDespesasGuiaDao.cs" />
+    <Compile Include="Avaliacao\Dao\IGuiaDAO.cs" />
     <Compile Include="Avaliacao\Entidades\DespesasGuia.cs" />
     <Compile Include="Avaliacao\Entidades\Guia.cs" />
+    <Compile Include="Avaliacao\Entidades\IDespesasGuiaProperties.cs" />
+    <Compile Include="Avaliacao\Entidades\IGuiaProperties.cs" />
     <Compile Include="Avaliacao\Entidades\TipoReducaoAcrescimo.cs" />
     <Compile Include="EnvioLote\Evento.cs" />
     <Compile Include="EnvioLote\Guia.cs" />

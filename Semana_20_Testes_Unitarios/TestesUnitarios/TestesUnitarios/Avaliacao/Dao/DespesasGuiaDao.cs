@@ -1,17 +1,25 @@
-﻿using System;
+﻿using Benner.Tecnologia.Common;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TestesUnitarios.Avaliacao.Entidades;
 
 namespace TestesUnitarios.Avaliacao.Dao
 {
-    public class DespesasGuiaDao
+    public class DespesasGuiaDao : IDespesasGuiaDao
     {
-        public IEnumerable<DespesasGuia> ObterDespesasDaGuia(long handleGuia)
+        private readonly IDao<IDespesasGuiaProperties> daoBase;
+
+        public DespesasGuiaDao(IDao<IDespesasGuiaProperties> daoBase)
         {
-            throw new NotImplementedException();
+            this.daoBase = daoBase;
+        }
+
+        public IEnumerable<IDespesasGuiaProperties> ObterDespesasDaGuia(long handleGuia)
+        {
+            var criterio = new Criteria("A.GUIA = :GUIA AND TIPOREDUCAOACRESCIMO <> :TIPO AND VALORREDUCAOACRESCIMO > 100");
+            criterio.Parameters.Add("GUIA", handleGuia);
+            criterio.Parameters.Add("TIPOREDUCAOACRESCIMO", (int)TipoReducaoAcrescimo.ItemAcrescimo);
+
+            return daoBase.GetMany(criterio);
         }
     }
 }
