@@ -9,9 +9,9 @@ namespace TestesUnitarios.Avaliacao.Business
         {
         }
 
-        public RespostaProcessamentoDto Processar(Guia guia)
+        public RespostaProcessamentoDto Processar(IGuiaProperties guia)
         {
-            throw new NotImplementedException();
+            return new RespostaProcessamentoDto();
         }
     }
 }

@@ -1,6 +1,9 @@
 ﻿using FluentAssertions;
+using NSubstitute;
 using NUnit.Framework;
 using TestesUnitarios.Avaliacao.Business;
+using TestesUnitarios.Avaliacao.Dao;
+using TestesUnitarios.Avaliacao.Entidades;
 
 namespace TestesUnitarios.Tests.Avaliacao.Business
 {
@@ -12,7 +15,9 @@ namespace TestesUnitarios.Tests.Avaliacao.Business
         {
             var processamentoGuia = new ProcessamentoGuias();
 
-            var guia = new GuiaFake().ObterGuiaValida();
+            var dao = Substitute.For<IDao<IGuiaProperties>>();
+
+            var guia = new GuiaFake(dao).ObterGuiaValida();
 
             var resultado = processamentoGuia.Processar(guia);
 

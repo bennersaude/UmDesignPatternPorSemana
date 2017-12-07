@@ -62,6 +62,7 @@
     <Compile Include="Avaliacao\Dao\IDao.cs" />
     <Compile Include="Avaliacao\Entidades\DespesasGuia.cs" />
     <Compile Include="Avaliacao\Entidades\Guia.cs" />
+    <Compile Include="Avaliacao\Entidades\IGuiaProperties.cs" />
     <Compile Include="Avaliacao\Entidades\TipoReducaoAcrescimo.cs" />
     <Compile Include="EnvioLote\Evento.cs" />
     <Compile Include="EnvioLote\Guia.cs" />
