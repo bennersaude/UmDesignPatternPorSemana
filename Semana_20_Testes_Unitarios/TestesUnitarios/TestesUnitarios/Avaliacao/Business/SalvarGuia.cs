@@ -3,9 +3,9 @@ using TestesUnitarios.Avaliacao.Entidades;
 
 namespace TestesUnitarios.Avaliacao.Business
 {
-    public class ServicoEnvioGuias : IServicoEnvioGuias
+    public class SalvarGuia : ISalvarGuia
     {
-        public RespostaServicoDto EnviarGuia(IGuiaProperties guia)
+        public void Salvar(IGuiaProperties guia)
         {
             throw new NotImplementedException();
         }

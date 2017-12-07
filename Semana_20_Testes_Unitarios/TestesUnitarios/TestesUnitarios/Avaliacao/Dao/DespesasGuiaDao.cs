@@ -7,9 +7,9 @@ using TestesUnitarios.Avaliacao.Entidades;
 
 namespace TestesUnitarios.Avaliacao.Dao
 {
-    public class DespesasGuiaDao
+    public class DespesasGuiaDao : IDespesasGuiaDao
     {
-        public IEnumerable<DespesasGuia> ObterDespesasDaGuia(long handleGuia)
+        public IEnumerable<IDespesasGuiaProperties> ObterDespesasDaGuia(long handleGuia)
         {
             throw new NotImplementedException();
         }
