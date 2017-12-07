@@ -37,6 +37,10 @@
     <StartupObject>TestesUnitarios.LojaVirtual.PrimeiroTeste.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Benner.Tecnologia.Application, Version=2008.0.0.0, Culture=neutral, PublicKeyToken=f2db26731026fd37, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Benner.Tecnologia.Application.dll.16.0.52.2\lib\net461\Benner.Tecnologia.Application.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Benner.Tecnologia.Business, Version=2008.0.0.0, Culture=neutral, PublicKeyToken=f2db26731026fd37, processorArchitecture=MSIL">
       <HintPath>..\Packages\Benner.Tecnologia.Business_BUSINESS.dll.16.0.52.2\lib\net461\Benner.Tecnologia.Business.dll</HintPath>
     </Reference>
@@ -53,14 +57,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Avaliacao\Business\IProcessarGuia.cs" />
+    <Compile Include="Avaliacao\Business\IServicoEnvioGuias.cs" />
     <Compile Include="Avaliacao\Business\RespostaProcessamentoDto.cs" />
     <Compile Include="Avaliacao\Business\RespostaServicoDto.cs" />
     <Compile Include="Avaliacao\Business\ServicoEnvioGuias.cs" />
+    <Compile Include="Avaliacao\Business\ProcessarGuia.cs" />
+    <Compile Include="Avaliacao\Business\Validacoes\DataAtendimento.cs" />
+    <Compile Include="Avaliacao\Business\Validacoes\IndicadorDeclaracaoObitoRN.cs" />
+    <Compile Include="Avaliacao\Business\Validacoes\IValidacoes.cs" />
+    <Compile Include="Avaliacao\Business\Validacoes\IValidacoesFactory.cs" />
+    <Compile Include="Avaliacao\Business\Validacoes\IValidacoesGuia.cs" />
+    <Compile Include="Avaliacao\Business\Validacoes\ValidacoesFactory.cs" />
+    <Compile Include="Avaliacao\Business\Validacoes\ValidacoesGuia.cs" />
+    <Compile Include="Avaliacao\Business\ValoresConfiguracao.cs" />
     <Compile Include="Avaliacao\Dao\Dao.cs" />
     <Compile Include="Avaliacao\Dao\DespesasGuiaDao.cs" />
     <Compile Include="Avaliacao\Dao\IDao.cs" />
     <Compile Include="Avaliacao\Entidades\DespesasGuia.cs" />
+    <Compile Include="Avaliacao\Entidades\GuiaProperties.cs" />
     <Compile Include="Avaliacao\Entidades\Guia.cs" />
+    <Compile Include="Avaliacao\Entidades\IGuiaProperties.cs" />
     <Compile Include="Avaliacao\Entidades\TipoReducaoAcrescimo.cs" />
     <Compile Include="EnvioLote\Evento.cs" />
     <Compile Include="EnvioLote\Guia.cs" />

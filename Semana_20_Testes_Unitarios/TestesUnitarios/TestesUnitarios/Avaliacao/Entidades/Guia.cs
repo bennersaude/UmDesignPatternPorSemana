@@ -7,7 +7,7 @@ using Benner.Tecnologia.Business;
 
 namespace TestesUnitarios.Avaliacao.Entidades
 {
-    public class Guia : BusinessEntity<Guia>
+    partial class Guia : BusinessEntity<Guia>
     {
         public DateTime? DataAtendimento { get; set; }
         public bool? IndicadorDeclaracaoObitoRn { get; set; }
