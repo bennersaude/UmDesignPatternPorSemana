@@ -27,6 +27,10 @@ namespace TestesUnitarios.Avaliacao
 
             servicoEnvio.Enviar(guia);
 
+            //TODO: FALTOU FAZER TESTES PARA CLASSE VALIDACAO GUIA
+            //TODO: FALTOU FAZER ENVIO DO SERVIÇO, BEM COMO TRATAMENTO DE ERRO E TESTS
+            //TODO: FALTOU FAZER O SALVAR DA GUIA, BEM COMO TESTS
+
             return new RespostaProcessamentoDto();
         }
     }
