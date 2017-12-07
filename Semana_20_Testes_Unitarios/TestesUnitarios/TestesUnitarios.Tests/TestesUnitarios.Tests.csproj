@@ -40,6 +40,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Benner.Tecnologia.Business, Version=2008.0.0.0, Culture=neutral, PublicKeyToken=f2db26731026fd37" />
     <Reference Include="Benner.Tecnologia.Business.Test, Version=2008.0.0.0, Culture=neutral, PublicKeyToken=f2db26731026fd37, processorArchitecture=MSIL">
       <HintPath>..\Packages\Benner.Tecnologia.Business.Test.dll.16.0.52.2\lib\net461\Benner.Tecnologia.Business.Test.dll</HintPath>
     </Reference>
@@ -64,6 +65,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Avaliacao\Business\ServicoEnvioGuiasTests.cs" />
     <Compile Include="CarrinhoCompras\CarrinhoComprasListaTests.cs" />
     <Compile Include="LojaVirtual\PrimeiroTeste\MaiorEMenorTests.cs" />
     <Compile Include="LojaVirtual\Validacao\Asserts\Asserts.cs" />
@@ -83,7 +85,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Avaliacao\Business\" />
     <Folder Include="Avaliacao\Dao\" />
     <Folder Include="Avaliacao\Entidades\" />
   </ItemGroup>
