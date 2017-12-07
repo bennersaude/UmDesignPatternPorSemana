@@ -64,6 +64,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Avaliacao\Business\GuiaFake.cs" />
     <Compile Include="Avaliacao\Business\ProcessamentoGuiasTests.cs" />
     <Compile Include="Avaliacao\Business\RespostaProcessamentoDtoFake.cs" />
     <Compile Include="CarrinhoCompras\CarrinhoComprasListaTests.cs" />

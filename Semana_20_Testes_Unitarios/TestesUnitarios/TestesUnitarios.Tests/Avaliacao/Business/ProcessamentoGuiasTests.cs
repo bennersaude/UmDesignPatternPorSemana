@@ -1,8 +1,6 @@
 ﻿using FluentAssertions;
 using NUnit.Framework;
-using System;
 using TestesUnitarios.Avaliacao.Business;
-using TestesUnitarios.Avaliacao.Entidades;
 
 namespace TestesUnitarios.Tests.Avaliacao.Business
 {
@@ -14,22 +12,11 @@ namespace TestesUnitarios.Tests.Avaliacao.Business
         {
             var processamentoGuia = new ProcessamentoGuias();
 
-            var guia = ObterGuiaFake();
+            var guia = new GuiaFake().ObterGuiaValida();
 
             var resultado = processamentoGuia.Processar(guia);
 
             resultado.ShouldBeEquivalentTo(new RespostaProcessamentoDtoFake().ObterRespostaComSucesso());
-
-        }
-
-        private Guia ObterGuiaFake()
-        {
-            return new Guia()
-            {
-                DataAtendimento = DateTime.Now,
-                IndicadorDeclaracaoObitoRn = false,
-                NumeroDeclaracaoObito = "123"
-            };
         }
     }
 }
