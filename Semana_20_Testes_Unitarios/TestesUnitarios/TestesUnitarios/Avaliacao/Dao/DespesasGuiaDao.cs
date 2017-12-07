@@ -1,17 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Benner.Tecnologia.Common;
 using TestesUnitarios.Avaliacao.Entidades;
 
 namespace TestesUnitarios.Avaliacao.Dao
 {
-    public class DespesasGuiaDao
+    public class DespesasGuiaDao : IDespesasGuiaDao
     {
-        public IEnumerable<DespesasGuia> ObterDespesasDaGuia(long handleGuia)
+        private readonly IDao<IDespesasGuiaProperties> despesasGuiaDao;
+
+        public DespesasGuiaDao(IDao<IDespesasGuiaProperties> despesasGuiaDao)
         {
-            throw new NotImplementedException();
+            this.despesasGuiaDao = despesasGuiaDao;
+        }
+
+        public IEnumerable<IDespesasGuiaProperties> ObterDespesasDaGuia(long handleGuia)
+        {
+            return despesasGuiaDao.GetMany(new Criteria());
         }
     }
 }
