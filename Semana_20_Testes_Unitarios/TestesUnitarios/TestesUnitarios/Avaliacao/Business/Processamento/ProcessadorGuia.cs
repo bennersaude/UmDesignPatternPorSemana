@@ -1,52 +1,67 @@
-﻿using TestesUnitarios.Avaliacao.Dao;
+﻿using Benner.Tecnologia.Common;
+using System.Collections;
+using System.Collections.Generic;
+using TestesUnitarios.Avaliacao.Dao;
 using TestesUnitarios.Avaliacao.Entidades;
 
 namespace TestesUnitarios.Avaliacao.Business.Processamento
 {
     public class ProcessadorGuia
     {
-        private IValidadorGuia _validador;
+        private IProcessadorGuia _validador;
         private IDao<IGuiaProperties> _daoGuia;
         private IGuiaProperties _guia;
-        private IServicoEnvioGuias _servicoEnvio;
+        private IProcessadorGuia _servicoEnvio;
+        private IList<IProcessadorGuia> _listaProcessadores = new List<IProcessadorGuia>();
 
-        public ProcessadorGuia(IValidadorGuia validador, IDao<IGuiaProperties> daoGuia, IServicoEnvioGuias servicoEnvio)
+        public ProcessadorGuia(IList<IProcessadorGuia> listaProcessadores, IDao<IGuiaProperties> daoGuia)
         {
-            _validador = validador;
             _daoGuia = daoGuia;
-            _servicoEnvio = servicoEnvio;
+            _listaProcessadores = listaProcessadores;
         }
 
         public ProcessadorGuia() : 
-            this(new ValidadorGuia(new Dao<DespesasGuia, IDespesasGuiaProperties>()), new Dao<Guia, IGuiaProperties>(), new ServicoEnvioGuias())
+            this(new List<IProcessadorGuia>() { new ValidadorGuia(new Dao<DespesasGuia, IDespesasGuiaProperties>()), new ServicoEnvioGuias() }, new Dao<Guia, IGuiaProperties>())
         {
         }
 
-        public RespostaProcessamentoDto Processar(IGuiaProperties guia)
+        public RespostaProcessamentoDto Executar(IGuiaProperties guia)
         {
             _guia = guia;
-            var resposta = ValidarGuia();
-            if (!resposta.Sucesso)
-                return resposta;
+            foreach (var processador in _listaProcessadores)
+            {
+                var respostaDTO = processador.Executar(guia);
+                if (!respostaDTO.Sucesso)
+                    return new RespostaProcessamentoDto()
+                    {
+                        Erros = respostaDTO.Erros,
+                        Sucesso = respostaDTO.Sucesso
+                    };
+            }
 
-            resposta = EnviarGuia();
-            if (!resposta.Sucesso)
-                return resposta;
+            var handleGuiaSalva = Salvar();
 
-            _daoGuia.Save<Guia>(guia);
-            resposta.Handle = guia.Handle;
+            return new RespostaProcessamentoDto()
+            {
+                Sucesso = true,
+                Handle = handleGuiaSalva
+            };
+        }
 
-            return resposta;
+        private Handle Salvar()
+        {
+            _daoGuia.Save<Guia>(_guia);
+            return _guia.Handle;
         }
 
         private RespostaProcessamentoDto ValidarGuia()
         {
-            return _validador.Validar(_guia);
+            return _validador.Executar(_guia) as RespostaProcessamentoDto;
         }
 
         private RespostaProcessamentoDto EnviarGuia()
         {
-            var retornoServico = _servicoEnvio.EnviarGuia(_guia);
+            var retornoServico = _servicoEnvio.Executar(_guia);
             return new RespostaProcessamentoDto()
             {
                 Erros = retornoServico.Erros,

@@ -58,6 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Avaliacao\Business\IServicoEnvioGuias.cs" />
+    <Compile Include="Avaliacao\Business\ProcessamentoDTOBase.cs" />
+    <Compile Include="Avaliacao\Business\Processamento\IProcessadorGuia.cs" />
     <Compile Include="Avaliacao\Business\Processamento\IValidadorGuia.cs" />
     <Compile Include="Avaliacao\Business\Processamento\ProcessadorGuia.cs" />
     <Compile Include="Avaliacao\Business\Processamento\ValidadorGuia.cs" />

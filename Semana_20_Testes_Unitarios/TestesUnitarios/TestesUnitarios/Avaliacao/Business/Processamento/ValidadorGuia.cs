@@ -8,7 +8,7 @@ using TestesUnitarios.Avaliacao.Entidades;
 
 namespace TestesUnitarios.Avaliacao.Business.Processamento
 {
-    public class ValidadorGuia : IValidadorGuia
+    public class ValidadorGuia : IProcessadorGuia
     {
         private IGuiaProperties _guia;
         private ValidationResults _validacoes;
@@ -18,21 +18,6 @@ namespace TestesUnitarios.Avaliacao.Business.Processamento
         {
             _validacoes = new ValidationResults();
             _daoDespesasGuia = daoDespesaGuia;
-        }
-
-        public RespostaProcessamentoDto Validar(IGuiaProperties guia)
-        {
-            _guia = guia;
-
-            ValidarData();
-            ValidarDeclaracaoObito();
-            ValidarReducaoAcrescimo();
-
-            return new RespostaProcessamentoDto()
-            {
-                Erros = _validacoes.Select(v => v.Message).ToList(),
-                Sucesso = _validacoes.IsValid
-            };
         }
 
         private void ValidarData()
@@ -59,6 +44,21 @@ namespace TestesUnitarios.Avaliacao.Business.Processamento
             if (!listaDespesas.Any()) return;
             if (listaDespesas.Where(d => d.ValorReducaoAcrescimo > 100).ToList().Any())
                 _validacoes.AddResult(new EntityValidationResult("Não deve existir nenhuma despesa com valor superior a 100."));
+        }
+
+        public ProcessamentoDTOBase Executar(IGuiaProperties guia)
+        {
+            _guia = guia;
+
+            ValidarData();
+            ValidarDeclaracaoObito();
+            ValidarReducaoAcrescimo();
+
+            return new RespostaProcessamentoDto()
+            {
+                Erros = _validacoes.Select(v => v.Message).ToList(),
+                Sucesso = _validacoes.IsValid
+            };
         }
     }
 }

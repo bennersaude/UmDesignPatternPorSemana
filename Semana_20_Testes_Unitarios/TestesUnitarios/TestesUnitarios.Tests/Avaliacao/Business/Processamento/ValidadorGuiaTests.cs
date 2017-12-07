@@ -35,7 +35,7 @@ namespace TestesUnitarios.Tests.Avaliacao.Business.Processamento
             _guia.DataAtendimento = definirDataSuperior ? DateTime.MaxValue : DateTime.MinValue;
 
             var validadorGuia = new ValidadorGuia(_daoDespesa);
-            var respostaDTO = validadorGuia.Validar(_guia);
+            var respostaDTO = validadorGuia.Executar(_guia);
 
             var respostaEsperadaDTO = new RespostaProcessamentoDto()
             {
@@ -51,7 +51,7 @@ namespace TestesUnitarios.Tests.Avaliacao.Business.Processamento
         {
             _guia.IndicadorDeclaracaoObitoRn.Returns(true);
             var validadorGuia = new ValidadorGuia(_daoDespesa);
-            var respostaDTO = validadorGuia.Validar(_guia);
+            var respostaDTO = validadorGuia.Executar(_guia);
 
             var respostaEsperadaDTO = new RespostaProcessamentoDto()
             {
@@ -69,7 +69,7 @@ namespace TestesUnitarios.Tests.Avaliacao.Business.Processamento
             despesaGuia.ValorReducaoAcrescimo = 101;
             _daoDespesa.GetMany(Arg.Any<Criteria>()).Returns(new List<IDespesasGuiaProperties>() { despesaGuia });
             var validadorGuia = new ValidadorGuia(_daoDespesa);
-            var respostaDTO = validadorGuia.Validar(_guia);
+            var respostaDTO = validadorGuia.Executar(_guia);
 
             var respostaEsperadaDTO = new RespostaProcessamentoDto()
             {
@@ -87,7 +87,7 @@ namespace TestesUnitarios.Tests.Avaliacao.Business.Processamento
             despesaGuia.ValorReducaoAcrescimo = 0;
             _daoDespesa.GetMany(Arg.Any<Criteria>()).Returns(new List<IDespesasGuiaProperties>());
             var validadorGuia = new ValidadorGuia(_daoDespesa);
-            var respostaDTO = validadorGuia.Validar(_guia);
+            var respostaDTO = validadorGuia.Executar(_guia);
 
             var respostaEsperadaDTO = new RespostaProcessamentoDto()
             {

@@ -1,10 +1,6 @@
-﻿using System.Collections.Generic;
-
-namespace TestesUnitarios.Avaliacao.Business
+﻿namespace TestesUnitarios.Avaliacao.Business
 {
-    public class RespostaServicoDto
+    public class RespostaServicoDto : ProcessamentoDTOBase
     {
-        public bool Sucesso { get; set; }
-        public IEnumerable<string> Erros { get; set; }
     }
 }

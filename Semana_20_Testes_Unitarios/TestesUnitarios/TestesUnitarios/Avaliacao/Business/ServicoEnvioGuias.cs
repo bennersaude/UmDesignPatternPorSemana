@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
+using TestesUnitarios.Avaliacao.Business.Processamento;
 using TestesUnitarios.Avaliacao.Entidades;
 
 namespace TestesUnitarios.Avaliacao.Business
 {
-    public class ServicoEnvioGuias : IServicoEnvioGuias
+    public class ServicoEnvioGuias : IProcessadorGuia
     {
-        public RespostaServicoDto EnviarGuia(IGuiaProperties guia)
+        public ProcessamentoDTOBase Executar(IGuiaProperties guia)
         {
             return new RespostaServicoDto()
             {
