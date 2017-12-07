@@ -64,6 +64,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Avaliacao\Business\ValidadorDeGuiasTests.cs" />
     <Compile Include="CarrinhoCompras\CarrinhoComprasListaTests.cs" />
     <Compile Include="LojaVirtual\PrimeiroTeste\MaiorEMenorTests.cs" />
     <Compile Include="LojaVirtual\Validacao\Asserts\Asserts.cs" />
@@ -83,7 +84,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Avaliacao\Business\" />
     <Folder Include="Avaliacao\Dao\" />
     <Folder Include="Avaliacao\Entidades\" />
   </ItemGroup>
