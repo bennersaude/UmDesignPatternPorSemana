@@ -43,6 +43,10 @@
     <Reference Include="Benner.Tecnologia.Common2, Version=2008.0.0.0, Culture=neutral, PublicKeyToken=f2db26731026fd37, processorArchitecture=MSIL">
       <HintPath>..\Packages\Benner.Tecnologia.Common2.dll.16.0.67.14\lib\net461\Benner.Tecnologia.Common2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Practices.EnterpriseLibrary.Validation.dll.4.1.0\lib\net461\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -53,6 +57,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Avaliacao\Business\IServicoEnvioGuias.cs" />
+    <Compile Include="Avaliacao\Business\Processamento\IValidadorGuia.cs" />
+    <Compile Include="Avaliacao\Business\Processamento\ProcessadorGuia.cs" />
+    <Compile Include="Avaliacao\Business\Processamento\ValidadorGuia.cs" />
     <Compile Include="Avaliacao\Business\RespostaProcessamentoDto.cs" />
     <Compile Include="Avaliacao\Business\RespostaServicoDto.cs" />
     <Compile Include="Avaliacao\Business\ServicoEnvioGuias.cs" />
@@ -61,6 +69,9 @@
     <Compile Include="Avaliacao\Dao\IDao.cs" />
     <Compile Include="Avaliacao\Entidades\DespesasGuia.cs" />
     <Compile Include="Avaliacao\Entidades\Guia.cs" />
+    <Compile Include="Avaliacao\Entidades\IDespesasGuiaProperties.cs" />
+    <Compile Include="Avaliacao\Entidades\IEntityBaseProperties.cs" />
+    <Compile Include="Avaliacao\Entidades\IGuiaProperties.cs" />
     <Compile Include="Avaliacao\Entidades\TipoReducaoAcrescimo.cs" />
     <Compile Include="EnvioLote\Evento.cs" />
     <Compile Include="EnvioLote\Guia.cs" />

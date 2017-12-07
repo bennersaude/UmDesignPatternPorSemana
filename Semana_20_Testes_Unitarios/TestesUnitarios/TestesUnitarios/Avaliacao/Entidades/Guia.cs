@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Benner.Tecnologia.Business;
+using Benner.Tecnologia.Common;
 
 namespace TestesUnitarios.Avaliacao.Entidades
 {
-    public class Guia : BusinessEntity<Guia>
+    public class Guia : EntityBase<Guia>, IGuiaProperties
     {
         public DateTime? DataAtendimento { get; set; }
         public bool? IndicadorDeclaracaoObitoRn { get; set; }

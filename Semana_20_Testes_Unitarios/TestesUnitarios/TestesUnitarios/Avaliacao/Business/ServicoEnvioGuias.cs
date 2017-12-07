@@ -1,13 +1,17 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using TestesUnitarios.Avaliacao.Entidades;
 
 namespace TestesUnitarios.Avaliacao.Business
 {
-    public class ServicoEnvioGuias
+    public class ServicoEnvioGuias : IServicoEnvioGuias
     {
-        public RespostaServicoDto EnviarGuia(Guia guia)
+        public RespostaServicoDto EnviarGuia(IGuiaProperties guia)
         {
-            throw new NotImplementedException();
+            return new RespostaServicoDto()
+            {
+                Erros = new List<string>(),
+                Sucesso = false
+            };
         }
     }
 }
