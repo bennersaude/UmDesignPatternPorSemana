@@ -13,7 +13,10 @@ namespace TestesUnitarios.Tests.Avaliacao.Business
         [Test]
         public void DeveProcessarGuiaCorretamente()
         {
-            var processamentoGuia = new ProcessamentoGuias();
+            var validador = Substitute.For<IValidadorGuias>();
+            validador.GuiaEhValida(Arg.Any<IGuiaProperties>()).Returns(true);
+
+            var processamentoGuia = new ProcessamentoGuias(validador);
 
             var dao = Substitute.For<IDao<IGuiaProperties>>();
 
