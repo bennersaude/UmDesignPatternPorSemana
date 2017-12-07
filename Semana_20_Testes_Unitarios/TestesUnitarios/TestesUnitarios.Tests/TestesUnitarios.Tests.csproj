@@ -68,6 +68,8 @@
     <Compile Include="Avaliacao\Business\GuiaFake.cs" />
     <Compile Include="Avaliacao\Business\ProcessamentoGuiasTests.cs" />
     <Compile Include="Avaliacao\Business\RespostaProcessamentoDtoFake.cs" />
+    <Compile Include="Avaliacao\Business\RespostaServicoDtoFake.cs" />
+    <Compile Include="Avaliacao\Business\ServicoEnvioGuiasTests.cs" />
     <Compile Include="Avaliacao\Business\ValidadorGuiaTests.cs" />
     <Compile Include="CarrinhoCompras\CarrinhoComprasListaTests.cs" />
     <Compile Include="LojaVirtual\PrimeiroTeste\MaiorEMenorTests.cs" />

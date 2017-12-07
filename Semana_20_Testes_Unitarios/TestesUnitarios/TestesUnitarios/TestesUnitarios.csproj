@@ -53,10 +53,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Avaliacao\Business\IServicoEnvioGuias.cs" />
+    <Compile Include="Avaliacao\Business\IValidadorGuias.cs" />
     <Compile Include="Avaliacao\Business\ProcessamentoGuias.cs" />
     <Compile Include="Avaliacao\Business\RespostaProcessamentoDto.cs" />
     <Compile Include="Avaliacao\Business\RespostaServicoDto.cs" />
     <Compile Include="Avaliacao\Business\ServicoEnvioGuias.cs" />
+    <Compile Include="Avaliacao\Business\ValidadorGuia.cs" />
     <Compile Include="Avaliacao\Dao\Dao.cs" />
     <Compile Include="Avaliacao\Dao\DespesasGuiaDao.cs" />
     <Compile Include="Avaliacao\Dao\IDao.cs" />
