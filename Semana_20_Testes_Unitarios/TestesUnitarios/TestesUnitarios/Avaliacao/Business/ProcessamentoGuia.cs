@@ -29,7 +29,6 @@ namespace TestesUnitarios.Avaliacao.Business
             {
                 respostaProcessamento.Sucesso = false;
                 respostaProcessamento.Erros = respostaServico.Erros;
-                respostaProcessamento.Handle = 0;
 
                 return respostaProcessamento;
             }
